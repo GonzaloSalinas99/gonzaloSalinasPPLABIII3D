@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Primer Parcial Salinas Gonzalo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="./assets/animal.jpg" alt="logo_animal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="anuncios.html">Administración</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="administracion">
+        <h2 class="h2">Administración</h2>
+        <img class="animales" src="./assets/animales.png" alt="animales">
+    </section>
+    <section>
+        <form>
+            <fieldset>
+                <legend>Información Del Anuncio</legend>
+                <label for="txtTitulo">TITULO:</label><br>
+                <input class="input" type="text" placeholder="Titulo" id="txtTitulo" name="txtTitulo" autocomplete="off" required><br>
+                <label for="txtDesc">DESCRIPCIÓN:</label><br>
+                <input class="input" type="text" placeholder="Descripción" id="txtDesc" name="txtDesc" autocomplete="off" required>
+                <fieldset>
+                    <legend>ANIMAL:</legend>
+                    <input type="radio" name="rdoAnimal" id="rdoPerro" value="Perro" checked>
+                    <label for="rdoPerro">Perro</label><br>
+                    <input type="radio" name="rdoAnimal" id="rdoGato" value="Gato">
+                    <label for="rdoGato">Gato</label><br>
+                </fieldset>
+                <label for="txtPrecio">PRECIO:</label><br>
+                <input class="input" type="number" placeholder="Precio" id="txtPrecio" name="txtPrec" autocomplete="off" required>
+                <div class="caracteristicas">
+                    <div class="container_caracteristicas">
+                        <img src="./assets/icono_raza.png" alt="raza" class="icon">
+                        <input class="input_caracteristicas" type="text" placeholder="Raza" id="txtRaza" name="txtRaza" autocomplete="off" required><br>
+                    </div>
+                    <div class="container_caracteristicas">
+                        <img src="./assets/icono_nacimiento.png" alt="nacimiento" class="icon">
+                        <input class="input_caracteristicas" type="date" placeholder="dd/mm/aaaa" id="fecha" name="fecha" autocomplete="off" required><br>
+                    </div>
+                    <div class="container_caracteristicas">
+                        <img src="./assets/icono_vacuna.png" alt="vacuna" class="icon">
+                        <select name="vacuna">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="hidden" name="txtId">
+
+                <button class="guardar" type="submit" id="btnAgregar">
+                    <img src="./assets/icono_guardar.png" alt="guardar" class="icon">
+                    guardar
+                </button>
+
+                <button class="Modificar" type="submit"  id="btnModificar" hidden="hidden">
+                    <img src="./assets/icono_guardar.png" alt="guardar" class="icon">
+                    Modificar
+                </button>
+                
+                <button class="Eliminar" type="button" id="btnDelete" hidden="hidden">
+                    <img src="./assets/icono_eliminar.png" alt="guardar" class="icon">
+                    Borrar
+                </button>
+
+                <button class="Cancelar" type="reset" id="btnCancel" hidden="hidden">
+                    <img src="./assets/icono_cancelar.png" alt="guardar" class="icon">
+                    Cancelar
+                </button>
+
+               
+
+            </fieldset>
+        </form>
+    </section>
+    <table id="tabla"></table>
+    <div class="spinner" id="spinner">
+        <img src="./assets/spinner.gif" alt="spinner">
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Anuncios</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+        <p>Todos los Derechos Reservados 2021©</p>
+    </footer>
+    <script type="module" src="./scripts/script.js"></script>
+</body>
+</html>
